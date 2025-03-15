@@ -1,14 +1,14 @@
-const taskValue = document.getElementsByClassName('task_value')[0];
-const taskSubmit = document.getElementsByClassName('task_submit')[0];
-const taskList = document.getElementsByClassName('task_list')[0];
+const taskValue = document.getElementById('task_value');
+const taskSubmit = document.getElementById('task_submit');
+const taskList = document.getElementById('task_list');
 
 const totalTasks = document.getElementById('totalTasks');
 const incompleteTasks = document.getElementById('incompleteTasks');
 const completedTasks = document.getElementById('completedTasks');
 
 const updateTaskCount = () => {
-  const tasks = document.querySelectorAll('.task_list li');
-  const completed = document.querySelectorAll('.task_list input[type="checkbox"]:checked').length;
+  const tasks = document.querySelectorAll('#task_list li');
+  const completed = document.querySelectorAll('#task_list input[type="checkbox"]:checked').length;
   const total = tasks.length;
   const incomplete = total - completed;
 
